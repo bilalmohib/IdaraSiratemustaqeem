@@ -1,16 +1,29 @@
 import Navbar from "@/app/Components/Navbar";
+import Slider from "@/app/Components/Slider";
+import TopNav from "@/app/Components/TopNav";
+
+import {
+  Box,
+  Typography,
+} from "@mui/material";
 
 import styles from "../styles/Pages/Home.module.css";
 
 const Home = () => {
   return (
-    <div>
+    <Box component={"section"}>
+      <Box component={"div"}>
+        <TopNav />
+      </Box>
       <Navbar />
-      <div className={styles.container}>
-        <h1>Home</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, magni inventore sequi debitis quam atque delectus. Molestiae aperiam neque esse eum rem nesciunt sint illum porro, facilis voluptatibus, dignissimos vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate itaque minus facere impedit voluptatem sunt? Amet, voluptas! Sint quidem, provident, explicabo architecto facere iusto, quisquam voluptates a magni voluptate consequuntur?</p>
-      </div>
-    </div>
+      <Slider />
+      <Box
+        component={"div"}
+        className={styles.container}
+      >
+
+      </Box>
+    </Box>
   )
 }
 export default Home;

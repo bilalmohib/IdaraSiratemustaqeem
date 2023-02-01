@@ -13,9 +13,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import Image from 'next/image';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItemsLeft = ['Home', 'About Us', 'Services', 'Events'];
+const navItemsRight = ['Gallery', 'Latest News', 'Contact', 'Blog'];
+
+import styles from './style.module.css';
 
 function Navbar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -31,7 +35,7 @@ function Navbar() {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
+        {(navItemsLeft).map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText primary={item} />
@@ -43,10 +47,15 @@ function Navbar() {
   );
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box className={styles.navContainer} sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" position='fixed'>
-        <Toolbar>
+      <AppBar component="nav" position="relative"
+        sx={{
+          backgroundColor: '#ffffff',
+          color: '#000000',
+        }}
+      >
+        <Toolbar sx={{ display: "flex", justifyContent: "center" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -56,20 +65,43 @@ function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            MUI
-          </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+
+          {/* Left Nav */}
+          <Box sx={{ display: { xs: 'none', sm: 'block' }, color: "#332D2D" }}>
+            {navItemsLeft.map((item) => (
+              <Button key={item} sx={{ color: "#332D2D", fontSize: 20, textTransform: "none" }}>
                 {item}
               </Button>
             ))}
           </Box>
+          {/* Left Nav */}
+
+          {/* Centeral Logo */}
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ display: { xs: 'none', sm: 'block' }, marginLeft: "25px", marginRight: "25px" }}
+          >
+            <Image
+              src="/Images/Navbar/logo.png"
+              alt="Idara Sirate Mustaqeem"
+              width={150}
+              height={150}
+              loading="eager"
+              title="Idara Sirate Mustaqeem"
+            />
+          </Typography>
+          {/* Centeral Logo */}
+
+          {/* Right Nav */}
+          <Box sx={{ display: { xs: 'none', sm: 'block' }, color: "#332D2D" }}>
+            {navItemsRight.map((item) => (
+              <Button key={item} sx={{ color: "#332D2D", fontSize: 20, textTransform: "none" }}>
+                {item}
+              </Button>
+            ))}
+          </Box>
+          {/* Right Nav */}
         </Toolbar>
       </AppBar>
       <Box component="nav">
