@@ -9,6 +9,7 @@ export const Footer: FC = (): ReactElement => {
         height: "auto",
         backgroundColor: "#839d47",
         color: "white",
+        marginTop: "3rem",
         paddingTop: "1rem",
         paddingBottom: "1rem",
       }}
