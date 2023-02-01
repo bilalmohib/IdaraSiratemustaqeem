@@ -7,8 +7,35 @@
     padding-top: 3.5%;
     /* border: 1px solid red; */
 }
-.container p{
-    font-size: 20px;
-    font-weight: 500;
-    color: #000000;
+.heading{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #231fb4;
+    font-family: 'Montserrat', sans-serif;
+}
+.subHeading{
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: #ffaa00;
+    margin-top: 1rem;
+    line-height: 50px;
+    border-top: 2px dashed #248536;
+    border-bottom: 2px dashed #248536; 
+}
+.image{
+    width: 600px;
+    height: 600px;
+    /* border: 1px solid red; */
+}
+
+.paragraph{
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1.5rem;
+    color: #050505;
+    margin-top: 1rem; 
 }
