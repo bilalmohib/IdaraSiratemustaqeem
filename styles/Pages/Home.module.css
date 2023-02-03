@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-.container{
-    font-family: 'Montserrat', sans-serif;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 3.5%;
-    /* border: 1px solid red; */
-}
 .heading{
     font-size: 2.5rem;
     font-weight: 700;

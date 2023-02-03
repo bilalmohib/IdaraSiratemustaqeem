@@ -1,5 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-.navContainer{
+.navContainer {
     font-family: 'Montserrat', sans-serif;
+    /* border: 1px solid rgb(9, 255, 0); */
+    height: 90px;
+    background-color: #ffffff;
+    color: #000000;
+    /* // border:"1px solid red", */
+    top: 50px;
+    transition: 0.1s linear;
+}
+
+/* When data scroll is not zero, the navbar is not visible. I want to make it visible when data scroll is not zero. */
+html:not([data-scroll="0"]) .navContainer {
+    /* border: 1px solid red; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: 0.1s linear;
+    /* background-color: #ffffff; */
+    /* color: #000000; */
+    /* // border:"1px solid red", */
+    /* top: 50px; */
+}
+
+.logoContainer {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+    margin-left: 3%;
+    height: 100%;
+}
+
+.logo {
+    margin-left: 2%;
+    width: 250px;
+    height: 80px;
+    display: block;
+}
+
+.logoCaption {
+    font-size: 1.5rem;
+    font-weight: 400;
+    height: 100%;
+    text-transform: uppercase;
+    color: #06989e;
+    margin-left: 30px;
+    text-shadow: 1px 0px 1px #06989e;
+    padding-top: 6px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* border: 1px solid red; */
+    /* margin-left: 2%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* vertical-align: middle; */
 }
