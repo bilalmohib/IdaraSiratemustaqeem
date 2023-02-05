@@ -19,10 +19,16 @@ const Home = () => {
         <TopNav />
       </Box>
       <Navbar />
-      <Slider />
+      <Box component={"div"}
+      sx={{ position: 'relative',
+      marginTop: '90px' 
+    }}
+      >
+        <Slider />
+      </Box>
       <Box
         component={"div"}
-        className={styles.container}
+        className="container"
       >
         <Grid2 container spacing={2}>
           <Grid2 xs={6} md={6} sm={12}>
@@ -68,6 +74,20 @@ const Home = () => {
             </Box>
           </Grid2>
           <Grid2 xs={12} md={12} sm={12}>
+            <Typography
+              variant="h2"
+              component="h2"
+              sx={{
+                fontSize: "2.5rem",
+                color: "#2726b5",
+                paddingLeft: "0rem",
+                justifyContent: "center",
+                textAlign: "center",
+                paddingBottom: "1rem",
+              }}
+            >
+              Books
+            </Typography>
             <BooksCollection />
           </Grid2>
         </Grid2>
