@@ -1,7 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# IDARA SIRATE MUSTAQEEM OFFICIAL
+This is the official website of Idara Sirate Mustaqeem. Idara Sirat-e-Mustaqeem is a non-profit organization that aims to provide a platform for the youth of Pakistan to learn and practice the teachings of Islam. We are a group of young people who are passionate about Islam and want to share our knowledge with others. We are a group of young people who are passionate about Islam and want to share Islamic knowledge with others.
 
-## Getting Started
+"Feham-e-Deen Cources" ‘The Understanding of Religion’ also organized under the kind control of Dr. Muhammad Ashraf Asif Jalali especially in the holy month of Ramzan. The main event is held in Gujranwala where Dr. Muhammad Ashraf Asif Jalali himself delivers the lectures which are now available in audio cassettes, CDs, DVDs and printed books. At times more than 6000 topics are available which itself is a record. The Publication House of Tehreek-e-Sirat-e-Mustaqeem, Data Darbar Market, Lahore has played a vital role in the wide spread of the message of Dr. Muhammad Ashraf Asif Jalali. The books are available in Urdu, English, Arabic and Persian languages.
 
+## Run Locally
 First, run the development server:
 
 ```bash
