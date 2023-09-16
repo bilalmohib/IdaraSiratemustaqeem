@@ -15,11 +15,10 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Image from "next/image";
 import Link from "@mui/material/Link";
-
 import { useRouter } from "next/router";
 
-const drawerWidth = 240;
-// const navItemsLeft = ['Home', 'About Us', 'Services', 'Events'];
+import styles from "./style.module.css";
+
 const navItemsLeft = [
   {
     name: "Home",
@@ -54,27 +53,8 @@ const navItemsLeft = [
     link: "/blog",
   },
 ];
-// const navItemsRight = ['Gallery', 'Latest News', 'Contact', 'Blog'];
-const navItemsRight = [
-  {
-    name: "Gallery",
-    link: "/gallery",
-  },
-  {
-    name: "Latest News",
-    link: "/news",
-  },
-  {
-    name: "Contact",
-    link: "/contact",
-  },
-  {
-    name: "Blog",
-    link: "/blog",
-  },
-];
 
-import styles from "./style.module.css";
+const drawerWidth = 240;
 
 function Navbar() {
   const router = useRouter();
