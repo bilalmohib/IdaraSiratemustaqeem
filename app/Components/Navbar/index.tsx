@@ -1,80 +1,80 @@
-import React, { useState, useEffect } from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Image from 'next/image';
-import Link from '@mui/material/Link';
+import React, { useState, useEffect } from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import CssBaseline from "@mui/material/CssBaseline";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
+import IconButton from "@mui/material/IconButton";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import MenuIcon from "@mui/icons-material/Menu";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Image from "next/image";
+import Link from "@mui/material/Link";
 
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 const drawerWidth = 240;
 // const navItemsLeft = ['Home', 'About Us', 'Services', 'Events'];
 const navItemsLeft = [
   {
-    name: 'Home',
-    link: '/',
+    name: "Home",
+    link: "/",
   },
   {
-    name: 'About Us',
-    link: '/about',
+    name: "About Us",
+    link: "/about",
   },
   {
-    name: 'Books',
-    link: '/books',
+    name: "Books",
+    link: "/books",
   },
   {
-    name: 'Events',
-    link: '/events',
+    name: "Events",
+    link: "/events",
   },
   {
-    name: 'Gallery',
-    link: '/gallery',
+    name: "Gallery",
+    link: "/gallery",
   },
   {
-    name: 'Latest News',
-    link: '/news',
+    name: "Latest News",
+    link: "/news",
   },
   {
-    name: 'Contact',
-    link: '/contact',
+    name: "Contact",
+    link: "/contact",
   },
   {
-    name: 'Blog',
-    link: '/blog',
-  }
-]
+    name: "Blog",
+    link: "/blog",
+  },
+];
 // const navItemsRight = ['Gallery', 'Latest News', 'Contact', 'Blog'];
 const navItemsRight = [
   {
-    name: 'Gallery',
-    link: '/gallery',
+    name: "Gallery",
+    link: "/gallery",
   },
   {
-    name: 'Latest News',
-    link: '/news',
+    name: "Latest News",
+    link: "/news",
   },
   {
-    name: 'Contact',
-    link: '/contact',
+    name: "Contact",
+    link: "/contact",
   },
   {
-    name: 'Blog',
-    link: '/blog',
-  }
+    name: "Blog",
+    link: "/blog",
+  },
 ];
 
-import styles from './style.module.css';
+import styles from "./style.module.css";
 
 function Navbar() {
   const router = useRouter();
@@ -89,7 +89,8 @@ function Navbar() {
     // The debounce function receives our function as a parameter
     const debounce = (
       // @ts-ignore
-      fn) => {
+      fn
+    ) => {
       // This holds the requestAnimationFrame reference, so we can cancel it if we wish
       // @ts-ignore
       let frame;
@@ -108,7 +109,7 @@ function Navbar() {
           // Call our function and pass any params we received
           fn(...params);
         });
-      }
+      };
     };
 
     // Reads out the scroll position and stores it in the data attribute
@@ -116,29 +117,32 @@ function Navbar() {
     const storeScroll = () => {
       // @ts-ignore
       document.documentElement.dataset.scroll = window.scrollY;
-    }
+    };
 
     // Listen for new scroll events, here we debounce our `storeScroll` function
-    document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+    document.addEventListener("scroll", debounce(storeScroll), {
+      passive: true,
+    });
 
     // Update scroll position for first time
     storeScroll();
-  })
+  });
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Idara Sirate Mustaqeem (ISM)
       </Typography>
       <Divider />
       <List>
-        {(navItemsLeft).map((item: any, index: number) => (
+        {navItemsLeft.map((item: any, index: number) => (
           <ListItem key={index} disablePadding>
-            <ListItemButton onClick={
-              () => {
+            <ListItemButton
+              onClick={() => {
                 console.log(item);
-              }
-            } sx={{ textAlign: 'center' }}>
+              }}
+              sx={{ textAlign: "center" }}
+            >
               <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
@@ -148,23 +152,26 @@ function Navbar() {
   );
 
   return (
-    <Box sx={{
-      display: 'flex',
-    }}>
+    <Box
+      sx={{
+        display: "flex",
+      }}
+    >
       <CssBaseline />
-      <AppBar component="nav" position="fixed"
-        className={styles.navContainer}
-      >
-        <Toolbar sx={{
-          // display: "flex", justifyContent: "center" 
-        }}
+      <AppBar component="nav" position="fixed" className={styles.navContainer}>
+        <Toolbar
+          sx={
+            {
+              // display: "flex", justifyContent: "center"
+            }
+          }
         >
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: "none" } }}
           >
             <MenuIcon />
           </IconButton>
@@ -187,7 +194,14 @@ function Navbar() {
             </Typography> */}
           </Box>
           {/* Left Nav */}
-          <Box sx={{ display: { xs: 'none', sm: 'flex' }, color: "#332D2D", marginLeft: "4%", paddingTop: "8px" }}>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "flex" },
+              color: "#332D2D",
+              marginLeft: "0%",
+              paddingTop: "10px",
+            }}
+          >
             {navItemsLeft.map((item: any, index: number) => (
               <Link
                 key={index}
@@ -196,20 +210,18 @@ function Navbar() {
                   fontSize: 20,
                   textTransform: "none",
                   display: "block",
-                  padding: "10px",
+                  paddingRight: "15px",
                   textDecoration: "none",
                   cursor: "pointer",
                   transition: "0.2s linear",
-                  '&:hover': {
+                  "&:hover": {
                     color: "#06989e",
                     textDecoration: "underline",
-                    transition: "0.2s linear"
-                  }
+                    transition: "0.2s linear",
+                  },
                 }}
                 onClick={() => {
-                  router
-                    .push(item.link)
-                    .then(() => window.scrollTo(0, 0));
+                  router.push(item.link).then(() => window.scrollTo(0, 0));
                 }}
               >
                 {item.name}
@@ -270,8 +282,11 @@ function Navbar() {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
           }}
         >
           {drawer}
