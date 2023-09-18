@@ -14,9 +14,9 @@ import {
     Box,
     Typography,
     TextField,
-    Button
+    Button,
+    Grid
 } from "@mui/material";
-import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 
 import { TypeAnimation } from 'react-type-animation';
 
@@ -73,8 +73,8 @@ const Books = () => {
                 component={"div"}
                 className="container"
             >
-                <Grid2 container spacing={2}>
-                    <Grid2 xs={12} md={12} sm={12}>
+                <Grid container spacing={2}>
+                    <Grid xs={12} md={12} sm={12}>
                         <Box>
                             <Box
                                 sx={{
@@ -155,9 +155,9 @@ const Books = () => {
                                 </Box>
                             </Box>
                         </Box>
-                    </Grid2>
+                    </Grid>
 
-                    <Grid2 xs={12} md={12} sm={12}>
+                    <Grid xs={12} md={12} sm={12}>
                     <Box className="d-flex justify-content-between">
                             <Typography
                                 variant={"h5"}
@@ -189,10 +189,10 @@ const Books = () => {
                             </Button>
                         </Box>
                         <BooksSlider />
-                    </Grid2>
+                    </Grid>
 
                     {/* Featured Books */}
-                    <Grid2 xs={12} md={12} sm={12}>
+                    <Grid xs={12} md={12} sm={12}>
                         <Typography
                             variant={"h5"}
                             component={"h5"}
@@ -201,9 +201,9 @@ const Books = () => {
                             Featured Book
                         </Typography>
                         <FeaturedBook />
-                    </Grid2>
+                    </Grid>
 
-                    <Grid2 xs={12} md={12} sm={12}>
+                    <Grid xs={12} md={12} sm={12}>
                         <Box className="d-flex justify-content-between">
                             <Typography
                                 variant={"h5"}
@@ -235,9 +235,9 @@ const Books = () => {
                             </Button>
                         </Box>
                         <BooksCategories />
-                    </Grid2>
+                    </Grid>
 
-                    <Grid2 xs={12} md={12} sm={12}>
+                    <Grid xs={12} md={12} sm={12}>
                         <Box className="d-flex justify-content-between">
                             <Typography
                                 variant={"h5"}
@@ -269,9 +269,9 @@ const Books = () => {
                             </Button>
                         </Box>
                         <BooksSlider />
-                    </Grid2>
+                    </Grid>
 
-                    <Grid2 xs={12} md={12} sm={12}>
+                    <Grid xs={12} md={12} sm={12}>
                         <Typography
                             variant={"h5"}
                             component={"h5"}
@@ -280,8 +280,8 @@ const Books = () => {
                             All Books
                         </Typography>
                         <BooksCollection />
-                    </Grid2>
-                </Grid2>
+                    </Grid>
+                </Grid>
             </Box>
             <Box className={styles.footer}>
                 <Footer />
